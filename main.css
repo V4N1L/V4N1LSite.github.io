@@ -1,0 +1,334 @@
+@import "./reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --container-width: 100vh;  /*ширина контейнера сверху*/
+    --container-padding: 15px;
+    --secondary: rgba(23, 32, 31, 0.5);
+}
+
+
+.nav {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    column-gap: 40px;
+}
+
+.left_part {
+    display: flex;
+    column-gap: 40px;
+}
+
+
+.right_part {
+    display: flex;
+    column-gap: 45px;
+    align-items: center;
+}
+
+.logo {
+
+    /* background: rgb(18, 219, 186);  */
+
+    text-align: center;
+
+    margin-left: 500px;
+    margin-right: 500px;
+}
+
+body {
+    padding-top: 100px;
+    margin: 0; /*убираем боковые полосы белые*/
+    font-family: "Poppins", sans-serif;
+    background-color: #1C1C1C;   /*---ВЕРХНЯЯ ПЛАШКА----*/
+    color: #ffffff;
+
+}
+
+a {
+     color: inherit;  /*чтобы слова приняли цвет от родителя (то есть от color в body)*/
+} 
+
+.container {
+
+    padding-left: 50px;
+    background:#232323;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 90px;
+}
+
+.header {
+
+    box-shadow: 0px 3px 20px 20px rgba(0, 0, 0, 0.5);
+     background: #232323;  /* ---СРЕДНЯЯ ПЛАШКА---- */
+    /* height: 100vh; растягивает изображение на весь экран под устройство */
+    background-repeat: no-repeat;  /*убирает повторы у изображения фона*/
+    background-size: cover; /*растягивает изображение равномерно*/
+}
+
+.header-line {
+        padding-top: 26px; /*чтобы отодвинулось от верха*/
+        /*display:flex; чтобы не шло столбиком, а строкой | когда я убрал его, то контейнер расширился */ 
+        align-items: center; /*выровняли по линии центра, чтоб текст не прыгал волной*/
+}
+/*-----------------Кнопки, Цвет, вид, анимация нажатия---------------------------*/
+.visual_btn {
+    display: inline-block;
+    padding:33px 10px;
+    margin-right: 50px;   /*Для ширины между "словами"*/
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.visual_btn:hover {
+    color: rgb(128, 128, 128);
+    transition: color 0.2s ease-in;
+}
+
+.visual_btn:active {
+    position:relative;
+    top: 1px;
+}
+
+
+
+.buy_btn {
+
+    background: linear-gradient(to right, hsl(268, 47%, 55%), #772ca8)!important;
+    border-radius: 100px;
+    display: inline-block;
+    padding:33px 40px;
+    margin-right: 50px;   /*Для ширины между "словами"*/
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.buy_btn:hover {
+    color: rgb(128, 128, 128);
+    transition: color 0.2s ease-in;
+}
+
+.buy_btn:active {
+    position:relative;
+    top: 1px;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------------*/
+
+
+.bell-img {
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 50%;
+    width: 100%;
+    max-width: 27px;
+}
+
+
+
+
+
+.content {
+    /* background-color: #772ca8; */
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-right: 20px;
+    padding-left: 20px;
+
+}
+
+.content img {
+border-radius: 25px;
+width: 300px;
+height: auto;
+cursor: pointer;
+margin-bottom: 10px;
+}
+
+.gallery {
+    gap: 10px;
+    display: flex;
+    /* background: rgb(186, 199, 6);  */
+    justify-content: center;
+    padding-top: 20px;
+} 
+
+.gallery-two {
+    gap: 10px;
+    display: flex;
+    /* background: rgb(186, 199, 6);  */
+    justify-content: center;
+} 
+
+.gallery-three {
+    gap: 10px;
+    display: flex;
+    /* background: rgb(186, 199, 6);  */
+    justify-content: center;
+
+} 
+
+.gallery-four {
+    gap: 10px;
+    display: flex;
+    /* background: rgb(186, 199, 6);  */
+    justify-content: center;
+
+} 
+
+.gallery-five {
+    gap: 10px;
+    display: flex;
+    /* background: rgb(186, 199, 6);  */
+    justify-content: center;
+
+} 
+/* ---------------------------------АНИМАЦИЯ ПРИБЛИЖЕНИЯ ПРЕВЬЮ--------------------------- */
+.scale {
+    transition: 1s; /* Время эффекта */
+   }
+   .scale:hover {
+    transform: scale(1.5); /* Увеличиваем масштаб */
+   }
+/* --------------------------------------------------------------------------------------- */
+
+    
+
+.soc {
+    display: flex;
+    flex-direction: column;
+}
+
+.bottom {
+    flex: 1 0 auto; /* Позволяем контенту растягиваться */
+}
+
+.footer {
+    box-shadow: 0px 3px 20px 20px rgba(0, 0, 0, 0.5);
+    position: fixed; /* Подвал как приклеенный */
+    bottom: 0; /* Фиксация снизу */
+    left: 0; /* К началу слева */
+    right: 0; /* Без отступов справа */
+    height: 50px; /* Задаем высоту */
+    margin-top: auto;
+    width: 100%;
+    height: 85px;
+    background: #121212;
+}
+
+/*-----------------------------------------------------------------*/
+
+    /* border: 2px solid #55c5e9; Рамка вокруг фотографии */
+    /* padding: 15px; Расстояние от картинки до рамки */
+    /* background: #666; Цвет фона */
+    /* margin-right: 10px; Отступ справа */
+    /* margin-bottom: 10px; Отступ снизу */
+
+
+
+
+    
+
+    /* gap: 70px; */
+    /* display: flex; */
+    /* justify-content: center; */
+
+    /* border-radius: 15px;
+    float:left;
+    margin-right: 10px !important;
+    margin-bottom: 10px !important; */
+
+
+.bottom {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+
+    column-gap: 40px;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+
+/* -------------------------ПОЛЗУНОК------------------------------- */
+
+
+.switcher {
+    margin-left: 20px;
+    /* background-color: #dd0a0a; */
+}
+/* Переключатель - коробка вокруг ползунка */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Скрыть флажок HTML по умолчанию (квадратик на фоне с галочкой типо) */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* Ползунок - цвет фона ползунка */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+   /* Ползунок - цвет самого ползунка */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: rgb(255, 255, 255);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #772ca8;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #772ca8;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Закругленные ползунки */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
